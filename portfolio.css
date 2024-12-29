@@ -1,0 +1,157 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #8840ee; /* Violet background */
+    color: #d0f02e; /* Yellow text */
+}
+
+/* Header Section */
+.main-header {
+    background: #000; /* Black background */
+    color:rgb(206, 233, 73); /* Yellow text color */
+    text-align: left; /* Align the header to the left */
+    padding: 2rem 3rem;
+}
+
+.main-header h1 {
+    margin: 0;
+    color: #c4f33a;
+    font-size: 2.5rem;
+}
+
+.main-header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: #000; /* Black background for navbar */
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.navbar ul li a {
+    color: #fafa53; /* Yellow text */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(224, 250, 55); /* Solid yellow underline */
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%; /* Underline appears on hover */
+}
+
+/* Section Styles */
+.section {
+    padding: 2rem;
+    text-align: left;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: #000; /* Dark background */
+    border-radius: 8px;
+    box-shadow: none; /* No box shadow */
+}
+
+/* About Section Layout */
+#about {
+    position: relative; /* Allows for absolute positioning of the profile picture */
+    color: #e7f046;
+    
+}
+
+#about .profile-text {
+    max-width: 60%; /* Ensures text doesn't take full width */
+    color: white;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    top: 0;
+    right: 0;
+    border-radius: 50%; /* Makes it a circle */
+    border: 5px solid transparent; /* Space for the gradient border */
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-origin: border-box;
+    background-clip: border-box;
+    position: absolute;
+    z-index: 0;
+}
+
+/* Add the gradient border effect */
+.profile-pic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    z-index: -1;
+    animation: spin 6s linear infinite; /* Optional spin effect */
+}
+
+/* Animation for spinning border (optional) */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Skills List */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    color: aliceblue;
+}
+
+.skills-list li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Project Section */
+.project {
+    margin-bottom: 1.5rem;
+    color: aliceblue;
+}
+footer {
+    background-color: #000;
+    color: #b74b4b;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
